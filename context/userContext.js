@@ -9,7 +9,7 @@ const UserContext = createContext();
 axios.defaults.withCredentials = true;
 
 export const UserContextProvider = ({ children }) => {
-  const serverUrl = "http://localhost:5000";
+  const serverUrl = process.env.NEXT_PUBLIC_SERVER_URL;
 
   const router = useRouter();
 
